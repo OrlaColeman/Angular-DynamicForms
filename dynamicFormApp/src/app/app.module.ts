@@ -7,13 +7,13 @@ import { FormsModule } from './forms/forms.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-],
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

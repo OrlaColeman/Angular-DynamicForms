@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { EmailFormComponent } from './forms/email-form/email-form.component';
 
 const routes: Routes = [
-  {path:"email", component:EmailFormComponent}
+  {path:"", component:EmailFormComponent}
 ];
 
 @NgModule({
