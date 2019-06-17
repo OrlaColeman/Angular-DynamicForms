@@ -10,11 +10,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class DynamicFormsComponent implements OnInit {
   form_template = [
     {
+ 
       "type":"select",
       "options":[1, 2 , 3, 4 ,5],
       "question": "rate your experience today"
     },
     {
+
       "type":"select",
       "options":[1, 2 , 3, 4 ,5],
       "question": "rate your experience out of 5 today"
