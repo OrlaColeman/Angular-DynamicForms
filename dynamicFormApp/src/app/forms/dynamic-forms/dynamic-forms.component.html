@@ -1,17 +1,23 @@
+<div class="container-fluid">
 <form [formGroup]="myFormGroup" (ngSubmit)="onSubmit()">
-    <div *ngFor="let form_elem of formTemplate">
-            {{form_elem.question}}
+<div class="col-md-4">
+  <div class="form-group">
+    <div *ngFor="let form_elem of formTemplate; let i = index">
+        {{form_elem.question}}
     <div [ngSwitch]="form_elem.type">
       <div *ngSwitchCase="'select'">
-        <select formControlName="{{form_elem.question}}">
-          <option *ngFor="let opt of form_elem.options">
+        <select class="form-control" formControlName="{{form_elem.question}}" required>
+          <option *ngFor="let opt of form_elem.options" >
             {{opt}}
           </option>
         </select>
       </div>
-    </div>  
-    <button type="submit">save</button>
- 
+      </div>
+    <button class="btn btn-primary" type="submit">save</button>
+    <button class="btn" (click)="changeIndex(i)">click me</button>
+  </div>
 </div>
-{{myFormGroup.value}}
-  </form>
+</div> 
+</form>
+
+</div>

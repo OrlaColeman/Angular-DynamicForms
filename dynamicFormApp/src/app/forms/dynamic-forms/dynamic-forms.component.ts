@@ -10,13 +10,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 export class DynamicFormsComponent implements OnInit {
   form_template = [
     {
- 
+      "id": 1,
       "type":"select",
       "options":[1, 2 , 3, 4 ,5],
       "question": "rate your experience today"
     },
     {
-
+      "id": 2,
       "type":"select",
       "options":[1, 2 , 3, 4 ,5],
       "question": "rate your experience out of 5 today"
@@ -27,6 +27,7 @@ export class DynamicFormsComponent implements OnInit {
   myFormGroup:FormGroup;
   formTemplate:any = this.form_template; 
   answers: any = {}
+
   constructor() {}    
   
   ngOnInit() {
@@ -41,8 +42,10 @@ export class DynamicFormsComponent implements OnInit {
   }
   
   onSubmit(){ 
-    console.log(this.myFormGroup.value);
+    // console.log(this.myFormGroup.value);
   }
-  showAnswers(){
+  changeIndex(index: number, form_elem: any){
+    console.log(form_elem)
+    console.log("function:" + index);
   }
 }
